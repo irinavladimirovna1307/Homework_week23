@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3125rem;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+.card__header {
+  color: white;
+  padding: 0.625rem;
+  font-size: 1.5625rem;
+  font-weight: 600;
+}
+.card__price {
+  color: white;
+  padding: 0.625rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.3125rem;
+}
+.card__price span {
+  font-size: 3.125rem;
+  font-weight: 600;
+}
+.card__speed {
+  background-color: rgb(244, 246, 247);
+  color: gray;
+  padding: 0.625rem;
+}
+.card__info {
+  background-color: rgb(214, 216, 216);
+  color: gray;
+  padding: 0.625rem 1.875rem;
+  line-height: 1.875rem;
+}
+.card--blue .card__header {
+  background-color: rgb(16, 169, 196);
+}
+.card--blue .card__price {
+  background-color: rgb(46, 203, 231);
+}
+.card--green .card__header {
+  background-color: rgb(38, 161, 65);
+}
+.card--green .card__price {
+  background-color: rgb(58, 201, 89);
+}
+.card--red .card__header {
+  background-color: rgb(232, 29, 25);
+}
+.card--red .card__price {
+  background-color: rgb(242, 97, 68);
+}
+.card--black .card__header {
+  background-color: rgb(39, 38, 38);
+}
+.card--black .card__price {
+  background-color: rgb(49, 49, 49);
+}
+.card--selected .card__header {
+  margin-top: -0.625rem;
+  padding: 1.25rem;
+}/*# sourceMappingURL=Tariff.module.css.map */
