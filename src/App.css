@@ -5,4 +5,5 @@
   flex-direction: row;
   gap: 0.3125rem;
   justify-content: center;
+  align-items: flex-start;
 }

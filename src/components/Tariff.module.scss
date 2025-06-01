@@ -1,36 +1,47 @@
-// Tariff.module.scss
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+.cardWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  overflow: visible;
+  padding: 0.5rem 0.2rem; // Добавляем отступ сверху/снизу
+}
 
 .card {
   display: flex;
   flex-direction: column;
-  gap: 0.3125rem; // 5px
-  font-family: "Montserrat", sans-serif;
+  gap: 0.3125rem;
   text-align: center;
   cursor: pointer;
   transition: transform 0.2s;
+  margin: 0;
+  border-radius: 1rem;
+  overflow: hidden; // Убедитесь, что это включено
+  width: 100%; // Занимает всю ширину контейнера
 
   &:hover {
     transform: scale(1.02);
   }
 
   &__header {
-    color: white; // Явно задаем белый цвет
-    padding: 0.625rem; // 10px
-    font-size: 1.5625rem; // 25px
-    font-weight: 600;
+    color: white;
+    padding: 0.625rem;
+    font-size: 1.25rem;
+    border-radius: 1rem 1rem 0 0; // Закругление только верхних углов
   }
 
   &__price {
-    color: white; // Явно задаем белый цвет
-    padding: 0.625rem; // 10px
+    color: white;
+    padding: 0.625rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 0.3125rem; // 5px
+    gap: 0.3125rem;
 
     span {
-      font-size: 3.125rem; // 50px
+      font-size: 3.125rem;
       font-weight: 600;
     }
   }
@@ -38,17 +49,18 @@
   &__speed {
     background-color: rgb(244, 246, 247);
     color: gray;
-    padding: 0.625rem; // 10px
+    padding: 0.625rem;
   }
 
   &__info {
     background-color: rgb(214, 216, 216);
     color: gray;
-    padding: 0.625rem 1.875rem; // 10px 30px
-    line-height: 1.875rem; // 30px
+    padding: 0.625rem 1.875rem;
+    line-height: 1.875rem;
+    border-radius: 0 0 1rem 1rem; // Закругление только нижних углов
   }
 
-  // Цветовые модификаторы для всей карточки
+  // Цветовые модификаторы
   &--blue {
     .card__header {
       background-color: rgb(16, 169, 196);
@@ -85,11 +97,29 @@
     }
   }
 
-  // Модификатор для выделенной карточки
-  &--selected {
+  // Выделение карточки 550р
+  &--highlight {
+    transform: scale(1.05);
+    z-index: 10;
+
+    // Увеличиваем только внутренние элементы, а не всю карточку
     .card__header {
-      margin-top: -0.625rem; // -10px
-      padding: 1.25rem; // 20px
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
+
+    .card__price {
+      font-size: 1.25rem;
+      padding: 1rem;
+
+      span {
+        font-size: 3.75rem;
+      }
+    }
+
+    .card__speed,
+    .card__info {
+      padding: 1rem;
     }
   }
 }

@@ -1,12 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+.cardWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  overflow: visible;
+  padding: 0.5rem 0.2rem;
+}
+
 .card {
   display: flex;
   flex-direction: column;
   gap: 0.3125rem;
-  font-family: "Montserrat", sans-serif;
   text-align: center;
   cursor: pointer;
   transition: transform 0.2s;
+  margin: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 100%;
 }
 .card:hover {
   transform: scale(1.02);
@@ -14,8 +26,8 @@
 .card__header {
   color: white;
   padding: 0.625rem;
-  font-size: 1.5625rem;
-  font-weight: 600;
+  font-size: 1.25rem;
+  border-radius: 1rem 1rem 0 0;
 }
 .card__price {
   color: white;
@@ -39,6 +51,7 @@
   color: gray;
   padding: 0.625rem 1.875rem;
   line-height: 1.875rem;
+  border-radius: 0 0 1rem 1rem;
 }
 .card--blue .card__header {
   background-color: rgb(16, 169, 196);
@@ -64,7 +77,22 @@
 .card--black .card__price {
   background-color: rgb(49, 49, 49);
 }
-.card--selected .card__header {
-  margin-top: -0.625rem;
-  padding: 1.25rem;
+.card--highlight {
+  transform: scale(1.05);
+  z-index: 10;
+}
+.card--highlight .card__header {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.card--highlight .card__price {
+  font-size: 1.25rem;
+  padding: 1rem;
+}
+.card--highlight .card__price span {
+  font-size: 3.75rem;
+}
+.card--highlight .card__speed,
+.card--highlight .card__info {
+  padding: 1rem;
 }/*# sourceMappingURL=Tariff.module.css.map */
