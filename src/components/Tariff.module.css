@@ -78,21 +78,31 @@
   background-color: rgb(49, 49, 49);
 }
 .card--highlight {
-  transform: scale(1.05);
+  position: relative;
   z-index: 10;
+  transform: translateY(-0.5rem);
+  box-shadow: 0 0 0 3px #c00303, 0 0 15px 5px rgba(255, 107, 0, 0.5);
+  animation: pulse 2s infinite;
 }
 .card--highlight .card__header {
   font-size: 1.5rem;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 .card--highlight .card__price {
   font-size: 1.25rem;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 .card--highlight .card__price span {
   font-size: 3.75rem;
 }
-.card--highlight .card__speed,
-.card--highlight .card__info {
-  padding: 1rem;
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 0, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 107, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 0, 0);
+  }
 }/*# sourceMappingURL=Tariff.module.css.map */

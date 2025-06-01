@@ -99,27 +99,40 @@
 
   // Выделение карточки 550р
   &--highlight {
-    transform: scale(1.05);
+    position: relative;
     z-index: 10;
+    transform: translateY(-0.5rem);
 
-    // Увеличиваем только внутренние элементы, а не всю карточку
+    // Рамка
+    box-shadow: 0 0 0 3px #c00303, 0 0 15px 5px rgba(255, 107, 0, 0.5);
+
+    // Анимация пульсации
+    animation: pulse 2s infinite;
+
     .card__header {
       font-size: 1.5rem;
-      padding: 1rem;
+      padding: 1.5rem;
     }
 
     .card__price {
       font-size: 1.25rem;
-      padding: 1rem;
+      padding: 1.5rem;
 
       span {
         font-size: 3.75rem;
       }
     }
+  }
 
-    .card__speed,
-    .card__info {
-      padding: 1rem;
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 107, 0, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(255, 107, 0, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 107, 0, 0);
     }
   }
 }
