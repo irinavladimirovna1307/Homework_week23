@@ -1,12 +1,44 @@
-# React + Vite
+# Тарифные карточки - React компонент | React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Проект реализует адаптивные тарифные карточки с возможностью выбора и визуальным выделением специального тарифа. Создан с использованием React и SCSS.
 
-Currently, two official plugins are available:
+## Особенности
+- Четыре цветовых варианта тарифов
+- Адаптивный дизайн
+- Интерактивные элементы
+- Специальное выделение тарифа 550р:
+  - Анимация пульсации
+  - Яркая градиентная рамка
+  - Эффект "поднятия"
+- Оптимизированная верстка
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Технологии
+- React 18
+- SCSS модули
+- CSS анимации
+- Flexbox layout
 
-## Expanding the ESLint configuration
+## Быстрый старт
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Установка и запуск
+
+1. Клонируйте репозиторий:
+   ```bash
+   git clone https://github.com/твой_пользователь/твой_репозиторий.git
+
+2. Перейдите в папку проекта:
+   ```bash
+   cd твой_репозиторий
+
+4. Установите зависимости:
+   ```bash
+   npm install
+
+5. Запустите проект в режиме разработки:
+   ```bash
+   npm run dev
+
+
+## Лицензия
+
+Этот проект распространяется под лицензией MIT.
