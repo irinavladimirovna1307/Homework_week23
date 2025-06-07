@@ -1,6 +1,6 @@
 import Tariff from "./Tariff";
 
-const TaiffList = ({ tariffs, selectedId, onTariffClick }) => {
+const TariffList = ({ tariffs, selectedId, onTariffClick }) => {
   return (
     <>
       {tariffs.map((tariff) => (
@@ -15,4 +15,4 @@ const TaiffList = ({ tariffs, selectedId, onTariffClick }) => {
   );
 };
 
-export default TaiffList;
+export default TariffList;

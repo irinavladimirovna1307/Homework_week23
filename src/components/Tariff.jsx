@@ -18,6 +18,7 @@ const Tariff = (props) => {
   return (
     <div className={styles.cardWrapper}>
       <div className={cardClasses} onClick={() => props.onClick(id)}>
+        {isSelectedCard && <div className={styles.selectedIndicator}>✓</div>}
         <div className={styles.card__header}>{name}</div>
         <div className={styles.card__price}>
           <p>руб</p>

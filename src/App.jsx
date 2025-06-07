@@ -1,8 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import Tariff from "./components/Tariff";
 import arrayOfTariffs from "./data/data";
-import TaiffList from "./components/TariffList";
+import TariffList from "./components/TariffList";
 
 function App() {
   const [selectedId, setSelectedId] = useState(null);
@@ -13,7 +12,7 @@ function App() {
 
   return (
     <div className="App">
-      <TaiffList
+      <TariffList
         tariffs={arrayOfTariffs}
         selectedId={selectedId}
         onTariffClick={onTariffClick}

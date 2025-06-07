@@ -16,20 +16,20 @@ const arrayOfTariffs = [
     color: "green",
   },
   {
-    id: 3,
-    name: "Безлимитный 550",
-    price: "550",
-    speed: "до 100 Мбит/сек",
-    info: "Объем включенного трафика не ограничен",
-    color: "red",
-  },
-  {
     id: 4,
     name: "Безлимитный 1000",
     price: "1000",
     speed: "до 200 Мбит/сек",
     info: "Объем включенного трафика не ограничен",
     color: "black",
+  },
+  {
+    id: 3,
+    name: "Безлимитный 550",
+    price: "550",
+    speed: "до 100 Мбит/сек",
+    info: "Объем включенного трафика не ограничен",
+    color: "red",
   },
 ];
 export default arrayOfTariffs;
