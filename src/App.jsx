@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Tariff from "./components/Tariff";
 import arrayOfTariffs from "./data/data";
+import TaiffList from "./components/TariffList";
 
 function App() {
   const [selectedId, setSelectedId] = useState(null);
@@ -12,14 +13,11 @@ function App() {
 
   return (
     <div className="App">
-      {arrayOfTariffs.map((tariff) => (
-        <Tariff
-          key={tariff.id}
-          info={tariff}
-          selectedId={selectedId}
-          onClick={onTariffClick}
-        />
-      ))}
+      <TaiffList
+        tariffs={arrayOfTariffs}
+        selectedId={selectedId}
+        onTariffClick={onTariffClick}
+      />
     </div>
   );
 }

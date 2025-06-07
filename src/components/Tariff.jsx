@@ -3,11 +3,14 @@ import styles from "./Tariff.module.scss";
 const Tariff = (props) => {
   const { id, name, price, speed, info: infoText, color } = props.info;
 
+  const isSelectedCard = props.selectedId === id;
+  const isHighlightedCard = Number(price) === 550;
+
   const cardClasses = [
     styles.card,
     styles[`card--${color}`],
-    props.selectedId === id ? styles["card--selected"] : "",
-    Number(price) === 550 ? styles["card--highlight"] : "",
+    isSelectedCard ? styles["card--selected"] : "",
+    isHighlightedCard ? styles["card--highlight"] : "",
   ]
     .filter(Boolean)
     .join(" ");
